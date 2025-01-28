@@ -1,0 +1,60 @@
+/* General Styles */
+body {
+  font-family: "Times New Roman", serif;
+  line-height: 2.0;
+  margin: 0;
+  padding: 0;
+  color: charcoalgray;
+  background-color: floralwhite;
+}
+
+/* Header */
+header {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Section Styles */
+section {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Portfolio Section */
+.project {
+  display: flex;
+  align-items: flex-start; /* Aligns content to the top */
+  justify-content: flex-start; /* Aligns content to the left */
+  flex-direction: column; /* Stacks content vertically */
+  text-align: left;
+}
+
+.project img {
+  width: 60%; /* Adjust image width */
+  margin-bottom: 1rem; /* Space below the image */
+}
+
+.project a {
+  color: emeraldgreen;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #333;
+  color: white;
+}
+``
