@@ -6,38 +6,53 @@
   <link rel="icon" type="image/png" sizes="512x512" href="fj.png">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Header Section -->
+ <!-- Header -->
   <header>
+  <nav class="navbar">
+    <div class="logo">FJ Portfolio</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+  </nav>
+  <div class="intro">
     <h1>Welcome to My Portfolio</h1>
     <p>Hi, I’m Fathimath Jasna, a beginner web developer, typist, and writer.</p>
-  </header>
+  </div>
+</header>
 
   <!-- About Section -->
-  <section id="about">
+  <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
     <p>I specialize in web development using HTML, CSS, and PHP, along with accurate typing and content creation services. I’m eager to learn and grow while delivering high-quality work to my clients.</p>
   </section>
 
   <!-- Portfolio Section -->
-  <section id="portfolio">
+  <section id="portfolio" data-aos="zoom-in-up">
     <h2>My Projects</h2>
-    <div class="project">
+    <div class="project" data-aos="fade-right" data-aos-delay="100" data-aos-duration="800">
   <h3>Personal Portfolio Website</h3>
   <p>This is a project where I built my own personal website to showcase my skills, projects, and services. The website includes sections such as a portfolio, skills overview, and contact form.</p>
-  <a id="a1" href="index.html" target="_blank">View Project</a>
+  <a id="a2" href="index.html" target="_blank">View Project</a>
 </div>
 
-    <div class="project">
+    <div class="project" data-aos="fade-right" data-aos-delay="100" data-aos-duration="800">
     <h3><br>Task Manager App</h3>
     <p>A simple task manager built with HTML, CSS, JavaScript, and PHP.</p>
     <img src="Screenshot1.jpeg" alt="Task Manager Screenshot 1" /><br>
     <img id="img1" src="Screenshot2.jpeg" alt="Task Manager Screenshot 2" />
+    <div class="button-wrapper">
     <a id="a2" href="http://localhost/Task manager" target="_blank">View Project</a>
   </div>
+  </div>
 
-    <div class="project" >
+    <div class="project" data-aos="fade-right" data-aos-delay="100" data-aos-duration="800">
     <h3>E-Commerce Website</h3>
     <p>A fully functional e-commerce website where users can browse products, add them to their cart.
     </p>
@@ -46,12 +61,14 @@
       <li>Technologies Used: HTML, CSS, JavaScript, PHP, MySQL, and Bootstrap.</li>
     </ul>
     <img id="img2" src="gift website.jpeg" alt="Homepage" />
+    <div class="button-wrapper">
     <a id="a2" href="http://localhost/project/index.php" target="_blank">View Live Demo</a>
+  </div>
 </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact">
+  <section id="contact"  data-aos="fade-up" data-aos-delay="200">
     <h2>Contact Me</h2>
     <p>Feel free to reach out for any projects or collaborations!</p>
     <a href="mailto:fathimathjasna12@gmail.com">fathimathjasna12@gmail.com</a>
@@ -60,5 +77,38 @@
   <footer>
     <p>&copy; 2025 Fathimath Jasna. All rights reserved.</p>
   </footer>
+
+<button onclick="scrollToTop()" id="scrollBtn" title="Go to top">↑</button>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
+<script>
+  // Show the button when scrolling down
+  window.onscroll = function () {
+    const scrollBtn = document.getElementById("scrollBtn");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  };
+
+  // Scroll to the top
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
 </body>
 </html>
